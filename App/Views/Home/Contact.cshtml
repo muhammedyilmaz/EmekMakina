@@ -1,0 +1,96 @@
+﻿@{
+    ViewData["Title"] = "İletişim";
+}
+
+<div class="container-indent">
+    <div class="container">
+        <div class="contact-map">
+            <div id="map"></div>
+        </div>
+    </div>
+</div>
+<div class="container-indent">
+    <div class="container container-fluid-custom-mobile-padding">
+        <div class="tt-contact02-col-list">
+            <div class="row">
+                <div class="col-sm-12 col-md-3 ml-sm-auto mr-sm-auto">
+                    <div class="tt-contact-info">
+                        <i class="tt-icon icon-f-93"></i>
+                        <h6 class="tt-title">TELEFON</h6>
+                        <address>
+                            +90 533 094 97 54<br>
+                            +90 533 477 77 46
+                        </address>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-3">
+                    <div class="tt-contact-info">
+                        <i class="tt-icon icon-f-52"></i>
+                        <h6 class="tt-title">E-POSTA</h6>
+                        <address>
+
+                            <a class="link" href="mailto:info@emekmak.com">info@emekmak.com</a>
+
+                        </address>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-3">
+                    <div class="tt-contact-info">
+                        <i class="tt-icon icon-f-24"></i>
+                        <h6 class="tt-title">ADRES</h6>
+                        <address>
+
+                            ORGANİZE SANAYİ BÖLGESİ<br>
+                            DOLAPDERE SANAYİ SİTESİ<br>
+                            12. ADA NO: 38 <br>
+                            KÜÇÜKÇEKMECE / İSTANBUL
+                        </address>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-3">
+                    <div class="tt-contact-info">
+                        <i class="tt-icon icon-f-92"></i>
+                        <h6 class="tt-title">ÇALIŞMA SAATLERİ</h6>
+                        <address>
+                            Pazartesi - Cuma günleri  <br>
+                            08:30-19:00 saatleri arasında<br>
+                            hizmet vermektedir.
+                        </address>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container-indent">
+    <div class="container container-fluid-custom-mobile-padding">
+        <form class="contact-form form-default" asp-action="Contact" asp-controller="Home" method="post">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <input type="text" name="name" class="form-control" id="inputName" placeholder="Adınız (zorunlu)">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="email" class="form-control" id="inputEmail" placeholder="Eposta Adresiniz (zorunlu)">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="subject" class="form-control" id="inputSubject" placeholder="Konu">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <textarea name="message" class="form-control" rows="7" placeholder="Mesajın (zorunlu)" id="textareaMessage"></textarea>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center">
+                <button type="submit" class="btn">MESAJ GÖNDER</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+@section Scripts {
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+}

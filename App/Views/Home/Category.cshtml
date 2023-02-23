@@ -1,0 +1,52 @@
+﻿@model Category
+
+@{
+    ViewData["Title"] = @Model.Name;
+}
+
+<div class="container-indent">
+    <div class="container container-fluid-custom-mobile-padding">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="content-indent">
+                    <div class="tt-filters-options desctop-no-sidebar" id="js-tt-filters-options">
+                        <h1 class="tt-title">
+                            @Model.Name <span class="tt-title-total">(@Model.Products.Count)</span>
+                        </h1>
+                    </div>
+                    <div class="tt-product-listing row">
+                        @foreach (var item in Model.Products)
+                        {
+                            <div class="col-6 col-md-4 col-lg-3 tt-col-item">
+                                <div class="tt-product thumbprod-center">
+                                    <div class="tt-image-box">
+
+                                        <a href="product.html">
+                                            <span class="tt-img"><img src="~/images/product/@item.ImagePath1" alt=""></span>
+                                            <span class="tt-img-roll-over"><img src="~/images/product/@item.ImagePath2" alt=""></span>
+                                        </a>
+                                    </div>
+                                    <div class="tt-description">
+                                        <div class="tt-row">
+                                            <ul class="tt-add-info">
+                                                <li><a href="#">@item.Description</a></li>
+                                            </ul>
+                                        </div>
+                                        <h2 class="tt-title"><a href="product.html">@item.Name</a></h2>
+
+                                        <div class="tt-product-inside-hover">
+                                            <div class="tt-row-btn">
+                                                <a href="#" class="btn" data-toggle="modal">DETAY</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                     
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
